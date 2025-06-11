@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Swati V</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Reusable Browser Topbar -->
+  <div id="topbar-placeholder"></div>
+
+  <!-- Main Home UI -->
+  <main class="google-home">
+    <h1 class="swati-logo">
+      <span class="s">S</span><span class="w">W</span><span class="a">a</span><span class="t">T</span><span class="i">i</span> <span class="v">V</span>
+    </h1>
+
+
+    <div class="search-bar">
+      <input type="text" placeholder="Enter a search query or URL" />
+      <i class="fa-solid fa-microphone"></i>
+    </div>
+
+    <div class="quick-links">
+      <!-- Blank boxes -->
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+      <div class="link-box"></div>
+    </div>
+  </main>
+
+  <!-- Load topbar and JS -->
+  <script>
+    fetch('topbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('topbar-placeholder').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'tabs.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>
