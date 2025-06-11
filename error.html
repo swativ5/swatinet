@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Not Found</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Reusable Browser Topbar -->
+  <div id="topbar-placeholder"></div>
+
+  <!-- Main Error UI -->
+  <main class="error-page">
+    <div class="error-container">
+      <img src="image/error.jpg" alt="Sad Cat" class="error-cat" />
+      <h1>404 — swati not found</h1>
+      <p>looks like you clicked on a broken bookmark or something you're not supposed to see hmm</p>
+      <p><a href="index.html" class="back-home-btn"> spawn point</a></p>
+
+    </div>
+  </main>
+
+  <!-- Load topbar and JS -->
+  <script>
+    fetch('topbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('topbar-placeholder').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'tabs.js';
+        document.body.appendChild(script);
+      });
+  </script>
+</body>
+</html>
