@@ -40,3 +40,24 @@ function addNewTab(title = "Google") {
   tabBar.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   newTab.classList.add("active");
 }
+
+document.addEventListener('click', function(e) {
+  const connectBtn = document.getElementById('profile-btn');
+  const connectTab = document.getElementById('connect-tab');
+  const closeConnectBtn = document.getElementById('close-connect');
+
+  if (!connectBtn || !connectTab) return;
+
+  if (e.target.closest('#profile-btn')) {
+    e.stopPropagation();
+    connectTab.style.display = (connectTab.style.display === 'block') ? 'none' : 'block';
+  }
+
+  if (e.target.closest('#close-connect')) {
+    connectTab.style.display = 'none';
+  }
+
+  if (!e.target.closest('#connect-tab') && !e.target.closest('#profile-btn')) {
+    connectTab.style.display = 'none';
+  }
+});
