@@ -70,3 +70,21 @@ document.addEventListener('click', function(e) {
     window.location.href = 'index.html';
   }
 });
+
+// Home button functionality
+document.addEventListener('click', function(e) {
+  // Check if home button was clicked
+  if (e.target.closest('.nav-buttons button') && e.target.closest('i.fa-house')) {
+    // Hide all pages
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+      page.style.display = 'none';
+    });
+    
+    // Show home page
+    const homePage = document.getElementById('home');
+    if (homePage) {
+      homePage.style.display = 'block';
+    }
+  }
+});

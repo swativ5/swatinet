@@ -14,33 +14,89 @@
   <!-- Reusable Browser Topbar -->
   <div id="topbar-placeholder"></div>
 
-  <!-- Main Home UI -->
-  <main class="google-home">
-    <h1 class="swati-logo">
-      <span class="s">S</span><span class="w">W</span><span class="a">a</span><span class="t">T</span><span class="i">i</span> <span class="v">V</span>
-    </h1>
-
-
-    <div class="search-bar">
-      <input type="text" placeholder="Enter a search query or URL" />
-      <i class="fa-solid fa-microphone"></i>
+  <!-- Main Content Area -->
+  <div id="content">
+    <!-- Default is Home -->
+    <div id="home" class="page active">
+      <main class="google-home">
+        <h1 class="swati-logo">
+          <span class="s">S</span><span class="w">W</span><span class="a">a</span><span class="t">T</span><span class="i">i</span> <span class="v">V</span>
+        </h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter a search query or URL" />
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+        <div class="search-buttons">
+          <button class="search-btn">Search</button>
+          <button class="lucky-btn">I'm Feeling Lucky</button>
+        </div>
+      </main>
     </div>
-    <div class="search-buttons">
-      <button class="search-btn"> Search</button>
-      <button class="lucky-btn"> I'm Feeling Lucky</button>
-    </div>
-  </main>
 
-  <!-- Load topbar and JS -->
+    <div id="portfolio" class="page" style="display:none">
+      <h2>Portfolio</h2>
+      <p>Here are some cool projects I've worked on.</p>
+    </div>
+
+    <div id="experience" class="page" style="display:none">
+      <h2>Experience</h2>
+      <p>Here's where I've interned and worked.</p>
+    </div>
+
+    <div id="resume" class="page" style="display:none">
+      <h2>Resume</h2>
+      <p>You can download my resume here.</p>
+    </div>
+
+    <div id="contact" class="page" style="display:none">
+      <h2>Contact</h2>
+      <p>Let's get in touch! I dont wanna talk to people though.</p>
+    </div>
+
+    <div id="extras" class="page" style="display:none">
+      <h2>Extras</h2>
+      <p>swati world</p>
+    </div>
+  </div>
+
+  <!-- Topbar Loader -->
   <script>
     fetch('topbar.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('topbar-placeholder').innerHTML = data;
+        
+        // Load tabs.js
         const script = document.createElement('script');
         script.src = 'tabs.js';
         document.body.appendChild(script);
+        
+        // Add bookmark navigation functionality after topbar is loaded
+        initBookmarkNavigation();
       });
+
+    function initBookmarkNavigation() {
+      const bookmarks = document.querySelectorAll('.bookmarks-bar .bookmark');
+      const pages = document.querySelectorAll('.page');
+
+      bookmarks.forEach(bookmark => {
+        bookmark.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = bookmark.getAttribute('data-page');
+          
+          // Hide all pages
+          pages.forEach(page => {
+            page.style.display = 'none';
+          });
+          
+          // Show target page
+          const targetPage = document.getElementById(target);
+          if (targetPage) {
+            targetPage.style.display = 'block';
+          }
+        });
+      });
+    }
   </script>
 
 </body>
