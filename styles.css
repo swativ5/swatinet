@@ -377,42 +377,32 @@ body {
 .swati-logo {
   font-family: 'Goudy Bookletter 1911', serif;
   font-size: 100px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 .swati-logo .s { /* Blue */
   color: #4285F4;
-  font-size: 60px;
-  font-weight: 600;
 }
 
 .swati-logo .w { /* Red */
   color: #EA4335; 
-  font-size: 60px;
-  font-weight: 600;
 }  
 
 .swati-logo .a { /* Yellow */
   color: #FBBC05; 
-  font-weight: 200;
 }  
 
 .swati-logo .t { /* B;ue */
   color: #4285F4;
-  font-size: 60px;
-  font-weight: 600;
 }
 
 .swati-logo .i { /* Green */
   color: #34A853;
-  font-size: 60px;
 }  
 
 
 .swati-logo .v { /* Red */
   color: #EA4335; 
-  font-size: 60px;
-  font-weight: 600;
 }  
 
 
@@ -514,4 +504,89 @@ p {
 .back-home-btn:hover {
   color: #551a8b; /* classic visited-link purple */
   text-decoration: underline;
+}
+
+/* Search Header - Add this section */
+.search-header {
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  padding: 20px 40px;
+  border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.search-header .swati-logo {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-top: 5px;
+  flex-shrink: 0;
+}
+
+.search-header .swati-logo .s { color: #4285F4; }
+.search-header .swati-logo .w { color: #EA4335; }
+.search-header .swati-logo .a { color: #FBBC05; }
+.search-header .swati-logo .t { color: #4285F4; }
+.search-header .swati-logo .i { color: #34A853; }
+.search-header .swati-logo .v { color: #EA4335; }
+
+.search-container {
+  flex: 1;
+}
+
+.search-box {
+  width: 600px;
+  max-width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 8px 16px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 12px;
+  color: #5f6368;
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.categories button {
+  border: none;
+  background-color: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.categories button:hover {
+  background-color: #e8eaed;
+}
+
+.results-info {
+  color: #70757a;
+  font-size: 14px;
+  padding-left: 10px;
 }

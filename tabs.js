@@ -67,19 +67,17 @@ document.addEventListener('click', function(e) {
 document.addEventListener('click', function(e) {
   // Check if home button was clicked
   if (e.target.closest('.nav-buttons button') && e.target.closest('i.fa-house')) {
-    window.location.href = 'index.html';
-  }
-});
-
-// Home button functionality
-document.addEventListener('click', function(e) {
-  // Check if home button was clicked
-  if (e.target.closest('.nav-buttons button') && e.target.closest('i.fa-house')) {
     // Hide all pages
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => {
       page.style.display = 'none';
     });
+    
+    // Hide search header
+    const searchHeader = document.querySelector('.search-header');
+    if (searchHeader) {
+      searchHeader.style.display = 'none';
+    }
     
     // Show home page
     const homePage = document.getElementById('home');
