@@ -86,3 +86,72 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
+// Bookmark Navigation Function
+function initBookmarkNavigation() {
+  const bookmarks = document.querySelectorAll('.bookmarks-bar .bookmark');
+  const pages = document.querySelectorAll('.page');
+  const searchHeader = document.querySelector('.search-header');
+
+  bookmarks.forEach(bookmark => {
+    bookmark.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = bookmark.getAttribute('data-page');
+      
+      // Hide all pages
+      pages.forEach(page => {
+        page.style.display = 'none';
+      });
+      
+      // Show target page
+      const targetPage = document.getElementById(target);
+      if (targetPage) {
+        if (target === 'home') {
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'none';
+          }
+        } else {
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'flex';
+          }
+        }
+      }
+    });
+  });
+}
+
+// Category Navigation Function
+function initCategoryNavigation() {
+  const categoryButtons = document.querySelectorAll('.categories button');
+  const pages = document.querySelectorAll('.page');
+  const searchHeader = document.querySelector('.search-header');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const buttonText = button.textContent.toLowerCase();
+      
+      // Hide all pages
+      pages.forEach(page => {
+        page.style.display = 'none';
+      });
+      
+      // Show target page
+      const targetPage = document.getElementById(buttonText);
+      if (targetPage) {
+        if (buttonText === 'home') { 
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'none';
+          }
+        } else {
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'flex';
+          }
+        }
+      }
+    });
+  });
+}
