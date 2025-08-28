@@ -155,3 +155,48 @@ function initCategoryNavigation() {
     });
   });
 }
+
+// Dropdown Navigation for both search dropdowns
+function initDropdownNavigation() {
+  const homeDropdown = document.querySelector('.search-bar-select'); // Home page dropdown
+  const headerDropdown = document.querySelector('.search-select'); // Search header dropdown
+  const pages = document.querySelectorAll('.page');
+  const searchHeader = document.querySelector('.search-header');
+
+  // Function to handle dropdown changes
+  function handleDropdownChange(dropdown) {
+    dropdown.addEventListener('change', function() {
+      const target = dropdown.value.toLowerCase();
+
+      // Hide all pages
+      pages.forEach(page => {
+        page.style.display = 'none';
+      });
+
+      // Show target page
+      const targetPage = document.getElementById(target);
+      if (targetPage) {
+        if (target === 'home') {
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'none';
+          }
+        } else {
+          targetPage.style.display = 'block';
+          if (searchHeader) {
+            searchHeader.style.display = 'flex';
+          }
+        }
+      }
+    });
+  }
+
+  // Apply the same functionality to both dropdowns
+  if (homeDropdown) {
+    handleDropdownChange(homeDropdown);
+  }
+  
+  if (headerDropdown) {
+    handleDropdownChange(headerDropdown);
+  }
+}
