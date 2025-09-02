@@ -138,6 +138,7 @@ body {
 /* Bookmarks Bar */
 .bookmarks-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 14px;
   padding: 6px 12px;
@@ -152,10 +153,11 @@ body {
   text-decoration: underline;
   cursor: pointer;
   font-family: "Segoe UI", sans-serif;
+  white-space: nowrap;
 }
 
 .bookmark:hover {
-  color: #551a8b; /* classic visited-link purple */
+  color: #551a8b;
   text-decoration: underline;
 }
 
@@ -383,6 +385,7 @@ body {
   font-family: 'Goudy Bookletter 1911', serif;
   font-size: 100px;
   letter-spacing: 3px;
+  word-break: break-word;
 }
 
 .swati-logo .s { /* Blue */
@@ -412,7 +415,8 @@ body {
 
 
 .search-bar {
-  width: 500px;
+  width: 80%;
+  max-width: 500px;
   display: flex;
   align-items: center;
   border: 1px solid #dfe1e5;
@@ -431,7 +435,7 @@ body {
   background: transparent;
   color: #333;
   padding: 5px 10px;
-
+  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -460,11 +464,12 @@ body {
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .search-btn,
 .lucky-btn {
-  background-color: #f8f9fa; /* classic light gray */
+  background-color: #f8f9fa;
   border: 1px solid #dcdcdc;
   color: #333;
   padding: 5px 15px;
@@ -493,6 +498,33 @@ body {
 }
 
 
+@media (max-width: 768px) {
+  /* .swati-logo {
+    /* font-size: 70px;
+  } */
+  .search-bar {
+    max-width: 90%;     
+  }
+}
+
+
+@media (max-width: 480px) {
+  .swati-logo {
+    font-size: 50px;      
+  }
+  .search-bar {
+    padding: 8px 12px;      
+  }
+  .search-buttons {
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .search-btn,
+  .lucky-btn {
+    width: 100%;           
+    justify-content: center;
+  }
+}
 
 /* Error Page Styles */
 .error-container {
@@ -526,11 +558,11 @@ p {
 }
 
 .back-home-btn:hover {
-  color: #551a8b; /* classic visited-link purple */
+  color: #551a8b; 
   text-decoration: underline;
 }
 
-/* Search Header - Add this section */
+/* Search Header */
 .search-header {
   font-family: 'Roboto', sans-serif;
   background: white;
@@ -629,9 +661,9 @@ p {
   margin: 0;
   max-width: none;
   width: 100%;
-  height: calc(100vh - 120px); /* Subtract topbar height */
+  height: calc(100vh - 120px); 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
