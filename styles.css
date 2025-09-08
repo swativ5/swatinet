@@ -114,6 +114,14 @@ body {
   background: #ffffff;
   border-top: 1px solid #c8dff8;
   border-bottom: 1px solid #aac6e8;
+  flex-wrap: wrap;
+}
+
+.url-bar-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 5px;
 }
 
 .nav-buttons button,
@@ -133,6 +141,34 @@ body {
   border-radius: 3px;
   font-size: 13px;
   background: #f9fcff;
+  min-width: 150px;
+}
+
+@media (max-width: 600px) {
+  .omnibox {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .nav-buttons {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .url-bar-container {
+    width: 100%; 
+  }
+
+  .url-bar {
+    width: 100%; 
+  }
+
+  .extra-buttons {
+    display: flex;
+    gap: 5px;
+  }
 }
 
 /* Bookmarks Bar */
