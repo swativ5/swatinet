@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+
+    <div class="top-gingham">
+        <div class="dummy-spacer"></div>
+        <img src="assests/swati5.png" alt="Logo" class="logo">
+        <div class="text-content">
+            <h1>Swati V</h1>
+        </div>
+    </div>
+    
+    <div class="nav-bar">
+        <a onclick="showSection('home')" class="active">Home</a>
+        <!-- <a onclick="showSection('skills')">Skills</a> -->
+         <a class = "skills" style = "color: transparent;">Portfolio</a>
+         <a onclick="showSection('portfolio')">Portfolio</a>
+        
+        <a onclick="showSection('contact')">Contact</a>
+        <a href="extra.html">Extras</a>
+    </div>
+
+    <div class="main-container">
+
+        <div class="side-column"></div>
+        
+        <div class="center-content">
+
+            <div id="home" class="content-section active">
+                <div class="two-column-layout">
+
+                    <div class="left-column">
+                        <h2>Hi, I'm Swati</h2>
+                        <p>
+                            Welcome to my corner of the internet.
+                            This space is a living snapshot of what I'm learning, building,
+                            and thinking about — from tech and systems to the little things
+                            I enjoy outside of work.
+                        </p>
+                        <p>
+                            More structured (and serious) content will live here soon.
+                            For now, consider this an introduction.
+                        </p>
+                        <p>Thanks for stopping by!</p>
+                    </div>
+
+                    <div class="right-side">
+                        <div class="scroll-right">
+                            <div class="current">
+                                <div class="info-card">
+                                    <div class="card-header">
+                                        <div class="header-text">
+                                            <span class="status-line">Pre-final year student</span>
+                                            <span class="status-line">Computer Science and Engineering (AI)</span>
+                                            <span class="status-line subtle">Amrita Vishwa Vidyapeetham</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Currently</h3>
+                                
+                                <div class="status-item">
+                                    <div class="status-label">
+                                        <strong>Reading</strong>
+                                    </div>
+                                    <span class="status-content">Dead Souls by Nikolai Gogol</span>
+                                </div>
+
+                                <div class="status-item">
+                                    <div class="status-label">
+                                        <strong>Re-Watching</strong>
+                                    </div>
+                                    <span class="status-content">Love is War</span>
+                                </div>
+
+                                <div class="status-item">
+                                    <div class="status-label">
+                                        <strong>Listening to</strong>
+                                    </div>
+                                    <span class="status-content">whatever the algorithm feeds me</span>
+                                </div>
+
+                                <div class="timestamp">
+                                    <span>last updated: jan 2026</span>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <a href="https://imsdb.com/scripts/Coraline.html" target="_blank">
+                        <img src="assests/buttons.png" style="width: 100%;">
+                        </a>
+                        <p>Some reasons are too strong for us</p>
+                        <div class="social-links">
+                            <a href="https://www.github.com/swativ5" target="_blank" class="social-icon"><i class="fa-brands fa-github-alt"></i></a>
+                            <a href="https://www.linkedin.com/in/swativ5" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:swativ.05.v@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#" onclick="copyDiscord(event)" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+                            <a href="extra.html" class="social-icon"><i class="fa-solid fa-star"></i></a>
+                        </div>
+                        <div id="copy-notification" class="copy-notification">Discord ID copied!</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="portfolio" class="content-section">
+                <div class="mobile-quick-nav">
+                    <a href="#education" onclick="scrollToSection('education')">Education</a>
+                    <a href="#skills" onclick="scrollToSection('skills')">Skills</a>
+                    <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+                    <a href="#achievements" onclick="scrollToSection('achievements')">Achievements</a>
+                    <a href="#publications" onclick="scrollToSection('publications')">Publications</a>
+                    <a href="#certifications" onclick="scrollToSection('certifications')">Certifs</a>
+                    <a href="#contacts" onclick="scrollToSection('contacts')">Contact</a>
+                </div>
+                
+                <div class="portfolio-layout">
+                    <div class="portfolio-sidebar">
+                        <div class="portfolio-section">
+                            <div class="section-title">Quick Links</div>
+                            <div class="link-list">
+                                <a href="#education" onclick="scrollToSection('education')">>> education</a>
+                                <a href="#skills" onclick="scrollToSection('skills')">>> skills</a>
+                                <a href="#projects" onclick="scrollToSection('projects')">>> projects</a>
+                                <a href="#achievements" onclick="scrollToSection('achievements')">>> achievements</a>
+                                <a href="#publications" onclick="scrollToSection('publications')">>> publications</a>
+                                <a href="#certifications" onclick="scrollToSection('certifications')">>> certifs</a>
+                                <a href="#contacts" onclick="scrollToSection('contacts')">>> contact</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-section">
+                            <div class="section-title">Currently:</div>
+                            <div class="section-content">
+                                <p><strong>Into:</strong> Machine Learning, Bioinformatics & </p>
+                                <p><strong>Planning:</strong> Life? idk man pls help </p>
+                                <p><strong>Re-Learning:</strong>Computer Networks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-main">
+                        <div id="education" class="portfolio-content-section">
+                            <h2>Education</h2>
+                            <div class="content-item">
+                                <h3>B.Tech in Computer Science Engineering (Artificial Intelligence)</h3>
+                                <p>Amrita Vishwa Vidyapeetham, Bengaluru, India<br>
+                                2023 – 2027<br>
+                                CGPA: 9.22 / 10.00</p>
+                                
+                                <h3>Ekya School BTM, Bengaluru, India</h3>
+                                <p>12th Grade, CBSE<br>
+                                Completed: May 2023<br>
+                                Grade: 88%</p>
+                                
+                                <h3>Ekya School JP Nagar, Bengaluru, India</h3>
+                                <p>10th Grade, ICSE<br>
+                                Completed: July 2021<br>
+                                Grade: 96.83%</p>
+                            </div>
+                        </div>
+
+                        <div id="skills" class="portfolio-content-section">
+                            <h2>Skills & Technical Expertise</h2>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <h3>Programming Languages</h3>
+                                    <p>C • C++ • Java • Python • JavaScript</p>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <h3>Machine Learning, Data & AI</h3>
+                                    <p>NumPy • Pandas • Matplotlib • Seaborn • Plotly • Scikit-learn • TensorFlow • PyTorch • OpenCV</p>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <h3>Systems, Databases & Low-Level Tools</h3>
+                                    <p>PostgreSQL • MySQL • Linux shell • Bash • Wireshark • Arduino</p>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <h3>Developer Tools & Environments</h3>
+                                    <p>Git • GitHub • Jupyter • JupyterLab • Google Colab • VS Code • PyCharm • Eclipse • CLI</p>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <h3>Research & Academic Skills</h3>
+                                    <p>Literature review • Experiment design • Data analysis • Statistical evaluation • Technical writing • Paper presentation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="projects" class="portfolio-content-section">
+                            <h2>Projects</h2>
+                            
+                            <div class="project-category">
+                                <h3 class="category-title">Machine Learning & AI</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Genomic-Based Brain Disease Classification</strong>: Multi-model framework achieving 80% accuracy with CNN on 268K+ DNA sequences
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Python, CNN, XGBoost, MLP, Random Forest, Stacking</em></p>
+                                        <p>• Trained CNN and classical machine learning models on a dataset of over 268,000 DNA sequences<br>
+                                        • Achieved approximately 80% classification accuracy with an AUC of 0.96<br>
+                                        • Designed a multi-model framework using k-mer vectorization and one-hot encoding<br>
+                                        • Classified neurological diseases including Alzheimer's, Parkinson's, and Glioblastoma<br>
+                                        • Custom CNN architecture achieved 83.5% training accuracy and 80% validation accuracy over 50 epochs</p>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Antimicrobial Resistance Prediction</strong>: ML-based prediction achieving F1 score of 0.97 for antibiotic resistance
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Python, Scikit-learn</em></p>
+                                        <p>• Achieved F1 score of 0.97 for predicting antibiotic resistance in Pseudomonas aeruginosa<br>
+                                        • Used SMOTE for class balancing and PCA for dimensionality reduction<br>
+                                        • Evaluated multiple classifiers including Random Forest, SVM, Logistic Regression, Decision Tree, and MLP</p>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Code Complexity Classification using Transformer Embeddings</strong>: 100% accuracy using ensemble models on code structure analysis
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: CodeT5, CodeBERT, T5, BERT, CodeT5+, XGBoost, Random Forest, CatBoost</em></p>
+                                        <p>• Analyzed single-function vs multi-function code classification<br>
+                                        • Used transformer embeddings including CodeT5, CodeBERT, T5, BERT, and CodeT5+<br>
+                                        • Achieved up to 100% accuracy using ensemble models such as XGBoost, Random Forest, and CatBoost<br>
+                                        • Demonstrated that transformer embeddings capture complexity-aware code structure<br>
+                                        • Application toward scalable automated grading systems</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="show-more-container">
+                                <span class="show-more-btn" onclick="toggleMoreProjects(this)">+ show more projects</span>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Computer Vision & Image Processing</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Steganalysis for DCT and LSB Domains</strong>: 89.9% accuracy detecting steganography using stacking ensemble
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Python, TensorFlow, Scikit-learn, NumPy, OpenCV, Autoencoders</em></p>
+                                        <p>• Achieved 89.9% accuracy using a stacking ensemble approach<br>
+                                        • Detected steganography in both spatial (LSB) and frequency (DCT) domains<br>
+                                        • Performed statistical analysis including T-test, KS test, ANOVA, KL divergence, and Chi-square tests to distinguish stego and cover images<br>
+                                        • Worked with image feature extraction and evaluation pipelines</p>
+                                    </div>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Autonomous Forest Surveillance for Real-Time Poacher Detection</strong>: Edge AI system for real-time human detection with alerts
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: ESP32-CAM, OpenCV, Blynk, SSD MobileNet V3</em></p>
+                                        <p>• Developed a low-power edge AI system for real-time human detection<br>
+                                        • Deployed on-device inference with live video streaming<br>
+                                        • Implemented alert notifications to forest rangers using Blynk</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Audio Processing</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Music Processing: Generation, Genre Classification, and Noise Filtering</strong>: High accuracy genre detection and text-to-music generation
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Python, Librosa, Scikit-learn</em></p>
+                                        <p>• Built systems for text-to-music generation and genre classification<br>
+                                        • Achieved high accuracy genre detection using SVM on the GTZAN dataset<br>
+                                        • Used cosine similarity for music retrieval from text descriptions<br>
+                                        • Applied spectral subtraction for noise reduction</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Algorithms & Graph Theory</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Optimizing Urban Navigation</strong>: Graph generation and pathfinding analysis on synthetic and real-world urban networks
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Python, OSMnx, Mesa</em></p>
+                                        <p>• Combined graph generation techniques such as Voronoi, Prim's, Kruskal's, and Cellular Automata<br>
+                                        • Applied pathfinding algorithms including Dijkstra's, A*, and Greedy BFS<br>
+                                        • Analyzed both synthetic and real-world urban graphs using OpenStreetMap data</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Cybersecurity</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>ARP Spoofing Attack and Mitigation</strong>: Network attack simulation and secure communication implementation
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Kali Linux, Ettercap, Metasploitable, DVWA, SSH, SCP</em></p>
+                                        <p>• Simulated ARP spoofing and man-in-the-middle attacks<br>
+                                        • Intercepted and analyzed network traffic<br>
+                                        • Secured communication using SSH encryption and SCP file transfers</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Embedded Systems</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Embedded AI Tic-Tac-Toe</strong>: Optimal gameplay using Minimax algorithm on touchscreen hardware
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: C, Arduino IDE, Adafruit TFT LCD</em></p>
+                                        <p>• Implemented Minimax algorithm for optimal AI decision-making<br>
+                                        • Designed touchscreen-based interactive gameplay<br>
+                                        • Optimized graphical rendering for embedded hardware</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category hidden-projects">
+                                <h3 class="category-title">Data Compression</h3>
+                                
+                                <div class="project-card">
+                                    <div class="project-summary">
+                                        <strong>Optimal Compression Techniques</strong>: Lossless text and image compression with binary storage system
+                                        <span class="read-more" onclick="toggleProject(this)">+ read more</span>
+                                    </div>
+                                    <div class="project-details">
+                                        <p><em>Tools: Java</em></p>
+                                        <p>• Implemented Huffman encoding for lossless text compression<br>
+                                        • Used chroma subsampling and Discrete Cosine Transform for image compression<br>
+                                        • Designed a binary storage and retrieval system</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="achievements" class="portfolio-content-section">
+                            <h2>Achievements</h2>
+                            
+                            <div class="project-card">
+                                <p><strong>Winner – BioHack 2025</strong> — BMS College of Engineering · Prize: ₹5,000</p>
+                                <p><strong>Wellness Assistant</strong></p>
+                                <p>Built a real-time wellness monitoring system combining posture detection, eye-state tracking (EAR), guided breathing, and Om chanting with speech recognition. Included session analytics and a modular, extensible design.</p>
+                            </div>
+
+                            <div class="project-card">
+                                <p><strong>2nd Place – HashCode 13 (24-hour Hackathon)</strong> — PES Innovation Lab · Prize: ₹35,000</p>
+                                <p><strong>Orma (Local-First Photo Library)</strong></p>
+                                <p>Developed a fully offline, browser-based photo library using React, File System Access API, and SQLite (WASM). Integrated YOLOv5-Face via ONNX Runtime + WebGPU for local face detection, with scalable ingestion and map-based browsing.</p>
+                            </div>
+                        </div>
+
+                        <div id="publications" class="portfolio-content-section">
+                            <h2>Publications</h2>
+                            
+                            <div class="content-item">
+                                <h3><a href="https://doi.org/10.1109/ESCI63694.2025.10988288" target="_blank">Auralize: Text to Tune</a></h3>
+                                <p>Proceedings of the 2025 International Conference on Emerging Smart Computing and Informatics (ESCI), IEEE, Pune, India, 2025</p>
+                            </div>
+                            
+                            <div class="content-item">
+                                <h3><a href="https://doi.org/10.1109/ISACC65211.2025.10969403" target="_blank">EchoVision: Real-Time Object Detection and Voice Assistance for the Visually Impaired</a></h3>
+                                <p>Proceedings of the 2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC), IEEE, Silchar, India, 2025</p>
+                            </div>
+                            
+                            <h3 class="category-title" style="margin-top: 2rem;">Presented Papers</h3>
+                            
+                            <div class="content-item">
+                                <h3>Understanding Question Complexity with Transformer-Based Code Representations</h3>
+                                <p>3rd IEEE International Conference on Networks, Multimedia and Information Technology (NMITCON-2025), NMIT, Bengaluru, India, August 2025</p>
+                            </div>
+                            
+                            <div class="content-item">
+                                <h3>Optimized Pathfinding in Dynamic Cityscapes</h3>
+                                <p>International Conference on Cognitive Systems (ICIACS-2025), Builders Engineering College, Tamil Nadu, May 2025</p>
+                            </div>
+                            
+                            <div class="content-item">
+                                <h3>Major Cause Exposure for Diabetes Prediction using PCA</h3>
+                                <p>International Conference on Health and Engineering Science (AMATHE-2025), PESITM, Shivamogga, India, April 2025</p>
+                            </div>
+                        </div>
+
+                        <div id="certifications" class="portfolio-content-section">
+                            <h2>Certifications</h2>
+                            <div class="content-item">
+                                <h3><a href="#" target="_blank">Finding Hidden Messages in DNA (Bioinformatics I)</a></h3>
+                                <p>Coursera – UC San Diego</p>
+                                
+                                <h3><a href="#" target="_blank">Genome Sequencing (Bioinformatics II)</a></h3>
+                                <p>Coursera – UC San Diego</p>
+                                
+                                <h3><a href="#" target="_blank">Currently pursuing the full Bioinformatics Specialization</a></h3>
+                                <p>University of California San Diego (Coursera)</p>
+                            </div>
+                        </div>
+                        
+                        <div id="contacts" class="portfolio-content-section">
+                            <h2>Contact Me</h2>
+                            <p>If you'd like to get in touch, feel free to reach out :))</p>
+                            
+                            <div class="portfolio-contact-links">
+                                <a href="https://www.github.com/swativ5" target="_blank" class="portfolio-contact-icon"><i class="fa-brands fa-github-alt"></i></a>
+                                <a href="https://www.linkedin.com/in/swativ5" target="_blank" class="portfolio-contact-icon"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="mailto:swativ.05.v@gmail.com" class="portfolio-contact-icon"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="#" onclick="copyDiscord(event)" class="portfolio-contact-icon"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="content-section">
+                <div class="two-column-layout">
+
+                    <div class="left-column">
+                        <p>
+                            You can reach me through the following channels:
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.github.com/swativ5" target="_blank" class="social-icon"><i class="fa-brands fa-github-alt"></i></a>
+                            <a href="https://www.linkedin.com/in/swativ5" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:swativ.05.v@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#" onclick="copyDiscord(event)" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+                        </div>
+                        <div id="copy-notification" class="copy-notification">Discord ID copied!</div>
+
+                        <p>
+                            I usually respond within a few days if you reach out via email :)
+                        </p>
+                        <p>Check out the extras section for fun stuff !!</p>
+                    </div>
+
+                    <div class="right-side">
+                        <div class="scroll-right">
+                            <h3>Imagine<i class="fa-solid fa-x" id="poem-close" onclick="showpoemredemption()"></i></h3>
+                            <div class="current">
+                                    Imagine there's no heaven
+                                    It's easy if you try
+                                    No hell below us
+                                    Above us only sky
+                                    Imagine all the people living for today
+                                    <br>
+                                    Imagine there's no countries
+                                    It isn't hard to do
+                                    Nothing to kill or die for
+                                    And no religion too
+                                    Imagine all the people living life in peace
+                                    <br>
+                                    You, you may say
+                                    I'm a dreamer, but I'm not the only one
+                                    I hope some day you'll join us
+                                    And the world will be as one
+                                    <br>
+                                    Imagine no possessions
+                                    I wonder if you can
+                                    No need for greed or hunger
+                                    A brotherhood of man
+                                    Imagine all the people sharing all the world
+                                    <br>
+                                    You, you may say
+                                    I'm a dreamer, but I'm not the only one
+                                    I hope some day you'll join us
+                                    And the world will live as one
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="contact-poem-buttons">    
+                            Do you want to see the poem again?
+                            <br>
+                            <button onclick="hidepoemredemption()">Yes, I shall be kind</button>
+                            <button onclick="hideallpoems()">No thanks</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="extras" class="content-section">
+                <h2>Extras</h2>
+                <p>Any additional content, hobbies, or fun facts about you.</p>
+            </div>
+        </div>
+        
+        <div class="side-column"></div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-bar a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+        }
+
+        function copyDiscord(event) {
+            event.preventDefault();
+            const discordId = 'candyy4248';
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(discordId).then(() => {
+                // Show notification
+                const notification = document.getElementById('copy-notification');
+                notification.classList.add('show');
+                
+                // Hide after 2 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function toggleProject(element) {
+            const projectCard = element.closest('.project-card');
+            const details = projectCard.querySelector('.project-details');
+            
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+                element.textContent = '+ read more';
+            } else {
+                details.style.display = 'block';
+                element.textContent = '- show less';
+            }
+        }
+
+        function toggleMoreProjects(element) {
+            const hiddenProjects = document.querySelectorAll('.hidden-projects');
+            const isHidden = hiddenProjects[0].style.display === 'none' || hiddenProjects[0].style.display === '';
+            
+            hiddenProjects.forEach(project => {
+                project.style.display = isHidden ? 'block' : 'none';
+            });
+            
+            element.textContent = isHidden ? '- show less projects' : '+ show more projects';
+        }
+
+        function showpoemredemption() {
+            const poemButtons = document.querySelector('.contact-poem-buttons');
+            poemButtons.style.display = 'block';
+            const poem = document.querySelector('#contact .scroll-right .current');
+            poem.style.display = 'none';
+            const poemheading = document.querySelector('#contact .scroll-right h3');
+            poemheading.style.display = 'none';
+            const borderbox = document.querySelector('#contact .scroll-right');
+            borderbox.style.border = 'none';
+        }
+
+        function hidepoemredemption() {
+            const poemButtons = document.querySelector('.contact-poem-buttons');
+            poemButtons.style.display = 'none';
+            const poem = document.querySelector('#contact .scroll-right .current');
+            poem.style.display = 'block';
+            const poemheading = document.querySelector('#contact .scroll-right h3');
+            poemheading.style.display = 'flex';
+            const borderbox = document.querySelector('#contact .scroll-right');
+            borderbox.style.border = '2px solid';
+            const poemclose = document.getElementById('poem-close');
+            poemclose.style.display = 'none';
+        }
+
+        function hideallpoems() {
+            const poemButtons = document.querySelector('.contact-poem-buttons');
+            poemButtons.style.display = 'none';
+            const poem = document.querySelector('#contact .scroll-right .current');
+            poem.style.display = 'none';
+            const poemheading = document.querySelector('#contact .scroll-right h3');
+            poemheading.style.display = 'none';
+            const borderbox = document.querySelector('#contact .scroll-right');
+            borderbox.style.border = 'none';
+            const poemclose = document.getElementById('poem-close');
+            poemclose.style.display = 'none';
+            const contactrightside = document.querySelector('#contact .right-side');
+            contactrightside.innerHTML = '<p>Thank you for visiting the contact section!</p>';
+        }
+    </script>
+
+</body>
+</html>
