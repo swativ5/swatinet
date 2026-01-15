@@ -469,7 +469,6 @@ body {
     padding: 10px;
     margin: 0 -1.5rem 1rem -1.5rem;
     overflow-x: auto;
-    white-space: nowrap;
     position: sticky;
     top: 0;
     z-index: 1000;
